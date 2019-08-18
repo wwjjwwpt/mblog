@@ -1,0 +1,131 @@
+<!--header.html-->
+{% load static %}
+<style>
+.navbar-a{
+    background: royalblue;
+    color: white;
+    height: 5px;
+}
+.navbar-a .navbar-nav{
+    text-align: center;
+    float: none;
+}
+.navbar .nav > li:hover .dropdown-menu {
+ display: inline-block;
+    float: none;
+}
+.dropdown-toggle
+{
+    text-align: center;
+}
+.dropdown-menu {
+    opacity: 0.5;
+}
+.menuitem
+{
+    text-align: center;
+    color: white;
+
+}
+.img-responsive
+{
+    display: block;
+  height: auto;
+  max-width: 100%;
+}
+</style>
+<nav class="navbar navbar-a" role="navigation"  style="width: 1900px">
+	<div class="container-fluid"style="width: 100%">
+
+	<div>
+		<ul class="nav navbar-nav"style="width: 100%">
+            <li class="menuitem" >
+				<a href="/" style="color:white;margin-left:650px">
+					首页
+				</a>
+			</li>
+            <li class="menuitem" >
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: white">
+					元器件
+				</a>
+				<ul class="dropdown-menu" style="background: cornflowerblue " >
+					<li><a href="#" style="color: white">电阻</a></li>
+					<li><a href="#" style="color: white">电感</a></li>
+                    <li><a href="#" style="color: white">电容</a></li>
+					<li><a href="#" style="color: white">二极管</a></li>
+                    <li><a href="#" style="color: white">三极管</a></li>
+                    <li><a href="#" style="color: white">集成运算放大器</a></li>
+                    <li><a href="#" style="color: white">CPLD/FPGA器件</a></li>
+                    <li><a href="#" style="color: white">TTL/CMOS数字集成电路</a></li>
+                    <li><a href="#" style="color: white">其他器件</a></li>
+				</ul>
+			</li>
+            <li class="menuitem">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: white">
+					实验仪器
+				</a>
+				<ul class="dropdown-menu" style="background: cornflowerblue " >
+					<li><a href="#" style="color: white">直流稳压源</a></li>
+					<li><a href="#" style="color: white">数字万用表</a></li>
+                    <li><a href="#" style="color: white">精密毫伏计</a></li>
+					<li><a href="#" style="color: white">函数信号发生器</a></li>
+                    <li><a href="#" style="color: white">双通道数字示波器</a></li>
+				</ul>
+			</li>
+            <li class="menuitem">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: white">
+					实验器材
+				</a>
+				<ul class="dropdown-menu" style="background: cornflowerblue " >
+					<li><a href="#" style="color: white">模拟电路实验箱</a></li>
+                    <li><a href="#" style="color: white">数字电路实验箱</a></li>
+				</ul>
+			</li>
+            <li class="menuitem">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: white">
+					EDA工具
+				</a>
+				<ul class="dropdown-menu" style="background: cornflowerblue " >
+					<li><a href="#" style="color: white">QUARTUS</a></li>
+					<li><a href="#" style="color: white">Multisim</a></li>
+                    <li><a href="#" style="color: white">PROTEUS</a></li>
+				</ul>
+			</li>
+            <li class="menuitem">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: white">
+					通知通告
+				</a>
+			</li>
+            <li class="menuitem">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: white">
+					实验技术
+				</a>
+			</li>
+            <li class="menuitem">
+                {% if username%}
+				<a href="/login" class="dropdown-toggle" data-toggle="dropdown" style="color: white;margin-left: 500px">
+                    {{ username }}
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" style="background: cornflowerblue;margin-left: 500px" >
+					<li><a href="/" style="color: white">个人空间</a></li>
+					<li><a href="/logout" style="color: white">注销</a></li>
+				</ul>
+                {% else %}
+                    <a href="/login" class="dropdown-toggle" data-toggle="dropdown" style="color: white;margin-left: 550px">
+                    登录
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" style="background: cornflowerblue;margin-left: 500px" >
+					<li><a href="/login" style="color: white">学生登录</a></li>
+					<li><a href="/login" style="color: white">教师登录</a></li>
+				</ul>
+                {% endif %}
+			</li>
+		</ul>
+	</div>
+	</div>
+</nav>
+   <div class="img-responsive" style="margin-left: 350px">
+        <img src="{% static "images/index.image.png" %}">
+    </div>

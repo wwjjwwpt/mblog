@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% block title %} 欢迎光临我的博客{% endblock %}
+{% block headmessage %}
+    <a style="font-family:楷体;color:midnightblue  ;font-size: 25px">仪表仪器实验</a>
+    <a  href="/" class="fa-arrow-right" style="margin-left: 70px">更多>></a>
+    <hr style="border:1.5px solid black;width: 300px;margin-top: 5px">
+{% endblock %}
+{% block content %}
+{% for post in posts %}
+        <p style="font-family: 微软雅黑;font-size: 16px;font-weight: bold;margin-top: 4px">
+        <a href="/post/{{ post.slug }}" style="font-family: 微软雅黑;color: black;margin-top: 4px;width: 300px">{{post.title}}</a>
+        </p>
+    <hr style="border:1px dashed grey;width: 300px;margin-top: 4px">
+    {% endfor %}
+{% endblock %}
+{% block headmessage1 %}
+    <a style="font-family:楷体;color:midnightblue  ;font-size: 25px">分析方法实验</a>
+    <a  href="/" class="fa-arrow-right" style="margin-left: 70px">更多>></a>
+    <hr style="border:1.5px solid black;width: 300px;margin-top: 5px">
+{% endblock %}
+{% block content1 %}
+{% for post in posts1 %}
+        <p style="font-family: 微软雅黑;font-size: 16px;font-weight: bold;margin-top: 4px">
+        <a href="/post1/{{ post.slug }}" style="font-family: 微软雅黑;color: black;margin-top: 4px">{{post.title}}</a>
+        </p>
+    <hr style="border:1px dashed grey;width: 300px;margin-top: 4px">
+    {% endfor %}
+{% endblock %}
+{% block headmessage2 %}
+    <a style="font-family:楷体;color:midnightblue  ;font-size: 25px">基本单元实验</a>
+   <a  href="/" class="fa-arrow-right" style="margin-left: 70px">更多>></a>
+    <hr style="border:1.5px solid black;width: 300px;margin-top: 5px">
+{% endblock %}
+{% block content2 %}
+{% for post in posts2 %}
+        <p style="font-family: 微软雅黑;font-size: 16px;font-weight: bold;margin-top: 4px">
+        <a href="/post2/{{ post.slug }}" style="font-family: 微软雅黑;color: black;margin-top: 4px">{{post.title}}</a>
+        </p>
+    <hr style="border:1px dashed grey;width: 300px;margin-top: 4px">
+    {% endfor %}
+{% endblock %}
+{% block headmessage3   %}
+    <a style="font-family:楷体;color:midnightblue  ;font-size: 25px">工程应用实验</a>
+    <a  href="/" class="fa-arrow-right" style="margin-left: 130px">更多>></a>
+    <hr style="border:1.5px solid black;width: 380px;margin-top: 5px">
+{% endblock %}
+{% block content3 %}
+{% for post in posts3 %}
+        <p style="font-family: 微软雅黑;font-size: 16px;font-weight: bold;margin-top: 4px">
+        <a href="/post3/{{ post.slug }}" style="font-family: 微软雅黑;color: black;margin-top: 4px">{{post.title}}</a>
+        </p>
+    <hr style="border:1px dashed grey;width: 380px;margin-top: 4px">
+    {% endfor %}
+{% endblock %}
+{% block headmessage4 %}
+    <a style="font-family:楷体;color:midnightblue  ;font-size: 25px">通知公告</a>
+    <a  href="/" class="fa-arrow-right" style="margin-left: 170px">更多>></a>
+    <hr style="border:1.5px solid black;width: 380px;margin-top: 5px">
+{% endblock %}
+{% block content4 %}
+{% for post in posts4 %}
+        <p style="font-family: 微软雅黑;font-size: 16px;font-weight: bold;margin-top: 4px">
+        <a href="/post4/{{ post.slug }}" style="font-family: 微软雅黑;color: black;margin-top: 4px">{{post.title}}</a>
+        </p>
+    <hr style="border:1px dashed grey;width: 380px;margin-top: 4px">
+    {% endfor %}
+{% endblock %}

@@ -15,7 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import include,path
+from mainsite.views import login
+from mainsite.views import homepage, showpost, showpost1, showpost2 ,showpost4, showpost3
+from mainsite.views import logout
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', homepage),
+    path('post/<slug:slug>/', showpost),
+    path('post1/<slug:slug>/', showpost1),
+    path('post2/<slug:slug>/', showpost2),
+    path('post3/<slug:slug>/', showpost3),
+    path('post4/<slug:slug>/', showpost4),
+    path('login/', login),
+    path('logout/',logout)
 ]
